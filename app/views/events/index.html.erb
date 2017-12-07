@@ -1,0 +1,8 @@
+<h1>Events</h1>
+<% @events.each do |c| %>
+  <h2><%= c.event %></h2>
+  <p><%= c.host %></p>
+  <p><%= c.activities %></p>
+  <p><%= c.address %></p>
+  <%= link_to "Save Event", event_path(c), :class =>"btn btn-default" %>
+<% end %>

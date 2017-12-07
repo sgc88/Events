@@ -1,0 +1,24 @@
+<h1>Edit Post</h1>
+<%= form_for @event do |f| %>
+  <p>
+    <%= f.label :event %><br>
+    <%= f.text_field(:event, {:class => "form-control"}) %>
+  </p>
+
+  <p>
+    <%= f.label :host %><br>
+    <%= f.text_area(:host, {:class => "form-control"})  %>
+  </p>
+  <p>
+    <%= f.label :activities %><br>
+    <%= f.text_field(:activities, {:class => "form-control"})  %>
+  </p>
+  <p>
+    <%= f.label :address %><br>
+    <%= f.text_field(:address, {:class => "form-control"})  %>
+  </p>
+
+  <p>
+    <%= f.submit ({:class => "btn btn-primary"})%>
+  </p>
+<% end %>

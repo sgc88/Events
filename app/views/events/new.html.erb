@@ -1,0 +1,7 @@
+<%= form_for Event.new do |f| %>
+  <p><strong>Event:</strong><%= f.text_field :event %></p>
+  <p><strong>Host:</strong><%= f.text_field :host %></p>
+  <p><strong>Activities:</strong><%= f.text_area :activities %></p>
+  <p><strong>Address:</strong><%= f.text_area :address %></p>
+  <p><strong>Submit:</strong><%= f.submit "Save" %></p>
+<% end %>
