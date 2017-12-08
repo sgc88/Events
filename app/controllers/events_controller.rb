@@ -1,12 +1,22 @@
 class EventsController < ApplicationController
   def index
     @events = Event.all
-    render :index
+    puts "params : #{params}"
+    search_targets = [:host, :event, :activities, :address, :zipcode]
+    # @events = Event.search(params[:search])
+    search_targets.each do |s|
+      if Event.where(s => params[:search]) != []
+        @events = Event.where(s => params[:search])
+        puts "EVENTS FOUND! #{@events}"
+      else
+        @events = Event.all
+      end
+    end
   end
 
   def create
-    event_params = params.require(:event).permit(:event, :host, :activities, :address, :zipcode)
-    @event = Event.new(event_params)
+    @event_params = params.require(:event).permit(:event, :host, :activities, :address, :zipcode, :search)
+    @event = Event.new(@event_params)
     if @event.save
       redirect_to events_path
     else
@@ -43,7 +53,7 @@ class EventsController < ApplicationController
   end
   private
   def events_params
-    params.require(:event).permit(:event, :host, :activities, :address, :zipcode)
+    params.require(:event).permit(:event, :host, :activities, :address, :zipcode, :search)
   end
 
 end
