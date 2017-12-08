@@ -12,4 +12,20 @@
  *
  *= require_tree .
  *= require_self
+
  */
+body{
+  background-image: url(/yutacar.jpg);
+  background-repeat: none;
+  background-size: cover;
+  color:pink;
+}
+.newEvent{
+  margin-left:3%;
+  width:20%;
+}
+.table{
+  margin:1% 1% 1% 1%;
+
+
+}

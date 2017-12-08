@@ -1,8 +1,10 @@
+<div class="newEvent">New Event:
 <%= form_for Event.new do |f| %>
-  <p><strong>Event:</strong><%= f.text_field :event %></p>
-  <p><strong>Host:</strong><%= f.text_field :host %></p>
-  <p><strong>Activities:</strong><%= f.text_area :activities %></p>
-  <p><strong>Address:</strong><%= f.text_area :address %></p>
-  <p><strong>Zipcode:</strong><%= f.text_area :zipcode %></p>
-  <p><strong>Submit:</strong><%= f.submit "Save" %></p>
+<div class="table"><%= f.text_field :event,  placeholder: "Event" %></div>
+<div class="table"><%= f.text_field :host,  placeholder: "Host" %></div>
+<div class="table"><%= f.text_area :activities,  placeholder: "Activities" %></div>
+<div class="table"><%= f.text_area :address, placeholder: "Address" %></div>
+<div class="table"><%= f.text_area :zipcode, placeholder: "zipcode" %></div>
+<div class="table"><%= f.submit "Save" %></div> 
 <% end %>
+</div>
