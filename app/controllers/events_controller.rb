@@ -19,7 +19,7 @@ class EventsController < ApplicationController
     @event_params = params.require(:event).permit(:event, :host, :activities, :address, :zipcode, :search, :start_time)
     @event = Event.new(@event_params)
     if @event.save
-      redirect_to events_path
+      redirect_to month_calendar_index_path
     else
       render "new"
     end
@@ -43,7 +43,7 @@ class EventsController < ApplicationController
     event_id = params[:id]
     event = Event.find_by_id(event_id)
     event.update_attributes(events_params)
-    redirect_to event_path
+    redirect_to month_calendar_index_path
   end
 
   def destroy
