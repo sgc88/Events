@@ -1,13 +1,13 @@
 class EventsController < ApplicationController
-  # before_action :authorize
+
   def index
     @events = Event.all
     puts "params : #{params}"
     search_targets = [:host, :event, :activities, :address, :zipcode]
-    # @events = Event.search(params[:search])
     search_targets.each do |s|
       if Event.where(s => params[:search]) != []
         @events = Event.where(s => params[:search])
+        redirect_to month_calendar_index_path
         puts "EVENTS FOUND! #{@events}"
       else
         @events = Event.all
