@@ -16,7 +16,7 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event_params = params.require(:event).permit(:event, :host, :activities, :address, :zipcode, :search)
+    @event_params = params.require(:event).permit(:event, :host, :activities, :address, :zipcode, :search, :start_time)
     @event = Event.new(@event_params)
     if @event.save
       redirect_to events_path
@@ -54,7 +54,7 @@ class EventsController < ApplicationController
   end
   private
   def events_params
-    params.require(:event).permit(:event, :host, :activities, :address, :zipcode, :search)
+    params.require(:event).permit(:event, :host, :activities, :address, :zipcode, :search, :start_time)
   end
 
 end

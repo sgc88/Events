@@ -23,6 +23,11 @@
   </p>
 
   <p>
+    <%= f.label :start_time %><br>
+    <%= f.datetime_select(:start_time, {:class => "form-control"})  %>
+  </p>
+
+  <p>
     <%= f.submit ({:class => "btn btn-primary"})%>
   </p>
 <% end %>
