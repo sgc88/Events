@@ -7,6 +7,10 @@ class SessionsController < ApplicationController
     puts user
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
+<<<<<<< HEAD
+=======
+      puts("#{current_user} ********************")
+>>>>>>> 20c022cf3aef3d78ea4459a050959cd4ac79d952
       redirect_to '/'
     else
       flash[:error] = "Incorrect username or password."

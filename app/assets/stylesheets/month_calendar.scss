@@ -1,3 +1,44 @@
 // Place all the styles related to the Month_calendar controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+<<<<<<< HEAD
+=======
+.simple-calendar {
+  .day {
+  
+  }
+
+  .wday-0 {}
+  .wday-1 {}
+  .wday-2 {}
+  .wday-3 {}
+  .wday-4 {}
+  .wday-5 {}
+  .wday-6 {}
+
+  .today {}
+  .past {}
+  .future {}
+
+  .start-date {
+    background-color: orange;
+  }
+
+  .prev-month {}
+  .next-month { }
+  .current-month {
+    background-color:orange;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .has-events {}
+}
+
+td{
+  color:#b30000;
+}
+.myevent{
+  color: #F8F8F8;
+  margin-top: 6%;
+}
+>>>>>>> 20c022cf3aef3d78ea4459a050959cd4ac79d952

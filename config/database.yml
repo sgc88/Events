@@ -23,7 +23,11 @@ default: &default
 
 development:
   <<: *default
+<<<<<<< HEAD
   database: pro-3_development
+=======
+  database: project-3_development
+>>>>>>> 20c022cf3aef3d78ea4459a050959cd4ac79d952
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -80,6 +84,11 @@ test:
 #
 production:
   <<: *default
+<<<<<<< HEAD
   database: pro-3_production
   username: pro-3
+=======
+  database: project-3_production
+  username: project -3
+>>>>>>> 20c022cf3aef3d78ea4459a050959cd4ac79d952
   password: <%= ENV['PRO-3_DATABASE_PASSWORD'] %>

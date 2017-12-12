@@ -17,9 +17,13 @@
 
  */
 body{
+<<<<<<< HEAD
   background-image: url(/party6.jpg);
   background-repeat: none;
   background-size: cover;
+=======
+
+>>>>>>> 20c022cf3aef3d78ea4459a050959cd4ac79d952
   color:brown;
 }
 .newEvent{
@@ -39,8 +43,14 @@ body{
   float: left;
   margin-left: 0;
   color: brown;
+<<<<<<< HEAD
   font-size: 30px;
   font-weight: lighter;
+=======
+  font-weight: lighter;
+  font-family:verdana;
+  font-size: 30px;
+>>>>>>> 20c022cf3aef3d78ea4459a050959cd4ac79d952
 
 }
 .container{
@@ -51,4 +61,23 @@ body{
 }
 .menu{
   color:black;
+<<<<<<< HEAD
+=======
+  text-align: justify;
+}
+
+a{
+  color: brown;
+}
+.infobar{
+  /*padding-top: 150px;*/
+  text-align:center;
+
+}
+
+.main{
+  width:500px;
+  height:100px;
+  margin-left:22%;
+>>>>>>> 20c022cf3aef3d78ea4459a050959cd4ac79d952
 }

@@ -1,4 +1,8 @@
 class EventsController < ApplicationController
+<<<<<<< HEAD
+=======
+  before_action :authorize
+>>>>>>> 20c022cf3aef3d78ea4459a050959cd4ac79d952
 
   def index
     @events = Event.all

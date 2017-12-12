@@ -23,3 +23,8 @@ Things you may want to cover:
 
 * ...
 # P-3
+<<<<<<< HEAD
+=======
+# FINAL
+# FINAL
+>>>>>>> 20c022cf3aef3d78ea4459a050959cd4ac79d952
