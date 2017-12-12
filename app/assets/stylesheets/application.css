@@ -17,9 +17,7 @@
 
  */
 body{
-  background-image: url(/party6.jpg);
-  background-repeat: none;
-  background-size: cover;
+
   color:brown;
 }
 .newEvent{
@@ -52,8 +50,20 @@ body{
 }
 .menu{
   color:black;
+  text-align: justify;
 }
 
 a{
   color: brown;
+}
+.infobar{
+  /*padding-top: 150px;*/
+  text-align:center;
+
+}
+
+.main{
+  width:500px;
+  height:100px;
+  margin-left:22%;
 }
