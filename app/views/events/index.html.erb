@@ -1,0 +1,8 @@
+<%= notice %>
+
+
+
+<%= form_tag(events_path, method: :get) do %>
+  <%= text_field_tag :search, params[:search], placeholder: "zipcode"  %>
+  <%= submit_tag 'Search', name: nil%>
+<% end %>

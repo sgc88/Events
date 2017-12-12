@@ -1,0 +1,17 @@
+<h2><%= @event.event %></h2>
+<h2><%= @event.host %></h2>
+<h2><%= @event.activities %></h2>
+<h2><%= @event.address %></h2>
+<h2><%= @event.zipcode %></h2>
+<h2><%= @event.start_time %></h2>
+
+
+<hr>
+<%= link_to "Edit", edit_event_path(@event), :class => "btn btn-default" %>
+<%= link_to "Delete", event_path(@event),
+          method: :delete,
+          data: {confirm: "Are you sure?"},
+          :class => "btn btn-danger" %>
+
+<%= link_to "Going!", :class => "btn btn-succes" %>
+<%= link_to "Maybe", :class => "btn btn-warning" %>

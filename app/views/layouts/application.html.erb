@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EventsApp</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default">
+  <div class= "container">
+      <div class= "navbar-header">
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <h1 class="navbar-brand" id="brand" href="#">FunToGo</h1>
+
+          <ul class="navbar-nav mr-auto">
+            <h3><%= link_to "New Event",  new_event_path %></h3>
+          </ul>
+          <ul class="navbar-nav mr-auto">
+            <h3><%= link_to "Calendar",  month_calendar_index_path %></h3>
+          </ul>
+          <ul class="navbar-nav mr-auto">
+            <h3><%= link_to "Gallery", static_images_gallery_path%></h3>
+          </ul>
+          </div>
+    </div>
+
+      <div class="user">
+        <% if current_user %>
+         Signed in as <%= current_user.name %> | <%= link_to "logout", '/logout' %>
+         <% else %>
+          <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
+        <% end %>
+      </div>
+    </div>
+
+
+  </div>
+
+</nav>
+    <%= yield %>
+  </body>
+</html>
