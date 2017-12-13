@@ -22,7 +22,11 @@
      background-repeat: none;
      background-size: cover;
      color:black;
+     /*height:1500px;*/
    }
+}
+html{
+  width: 100%;
 }
 
 .newEvent{
@@ -41,19 +45,19 @@
   font-style: italic;
   float: left;
   margin-left: 0;
-  color: brown;
+  color: red;
   font-size: 30px;
   font-weight: bold;
 }
-.container{
+/*.container{
   margin-left: 0;
   height:30px;
   opacity: 0.7;
   width:100%;
-}
+}*/
 .menu{
   color:black;
-  text-align: justify;
+  /*text-align: justify;*/
 }
 
 a{
@@ -66,7 +70,20 @@ a{
 }
 
 .main{
-  width:500px;
+  width:800px;
   height:100px;
   margin-left:22%;
+   color: #d54d7b; font-family: "Great Vibes", cursive; font-size: 200px; line-height: 200px; font-weight: normal; margin-bottom: 0px; margin-top: 50px; text-align: center; text-shadow: 0 1px 1px #fff;
+}
+h2{
+  font-size: 15px;
+}
+p{
+  font-size: 12px;
+}
+a{
+  font-size: 12px;
+}
+h5{
+  font-size: 17px;
 }

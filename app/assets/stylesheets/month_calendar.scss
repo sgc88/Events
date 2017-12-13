@@ -26,16 +26,18 @@
   .next-month { }
   .current-month {
     background-color:orange;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.3);
+    color:black;
   }
 
-  .has-events {}
+  .has-events {
+  }
 }
 
 td{
   color:#b30000;
 }
 .myevent{
-  color: #F8F8F8;
+
   margin-top: 6%;
 }
