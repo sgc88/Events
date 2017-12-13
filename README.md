@@ -1,27 +1,71 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Final Project: FunToGo
+===================
 
-Things you may want to cover:
 
-* Ruby version
+**FunToGo** is a planning and organizing web based application for your events needs.
 
-* System dependencies
 
-* Configuration
+----------
 
-* Database creation
 
-* Database initialization
+![Alt text](public/screenshot1.png)
 
-* How to run the test suite
+----------
+![Alt text](public/screenshot2.png)
 
-* Services (job queues, cache servers, search engines, etc.)
+----------
 
-* Deployment instructions
+
+![Alt text](public/screenshot3.png)
+
+----------
+
+
+**Sherry Cheng** - https://github.com/sgc88
+
+
+
+
+----------
+
+
+Technologies
+-------------------
+  * HTML
+  * RubyOnRails
+  * CSS
+  * Bootstrap
+  * gem 'simple-calendar'
+  * gem 'acts_as_votable
+
+
+
+----------
+
+
+Existing Features
+-------------------
+* User Authentication/authorization
+* Users can show, create, update, and delete "events".
+* Users can only have full access to events that they have created.
+* Users can use click on going button if they are going participate
+* user can see all events based on their location
+* Users can see the full calendar
+
+
+
+----------
+
+
+Planned Features
+-------------------
+* Be able to invite people via email/text
+* Be able to receive friendly reminder email
+* Be able to create a list of stuff when they want to contribute to the event
+* Be able to see the location on map and get directions.
 
 * ...
-# P-3
 # FINAL
 # FINAL
