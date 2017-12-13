@@ -1,8 +1,5 @@
 class EventsController < ApplicationController
-<<<<<<< HEAD
-=======
   before_action :authorize
->>>>>>> 20c022cf3aef3d78ea4459a050959cd4ac79d952
 
   def index
     @events = Event.all
@@ -22,6 +19,7 @@ class EventsController < ApplicationController
   def create
     @event_params = params.require(:event).permit(:event, :host, :activities, :address, :zipcode, :search, :start_time)
     @event = Event.new(@event_params)
+    current_user.events << @event
     if @event.save
       redirect_to month_calendar_index_path
     else
@@ -45,17 +43,40 @@ class EventsController < ApplicationController
 
   def update
     event_id = params[:id]
-    event = Event.find_by_id(event_id)
-    event.update_attributes(events_params)
-    redirect_to month_calendar_index_path
+    @event = Event.find_by_id(event_id)
+    if current_user == @event.user
+      @event.update_attributes(events_params)
+      redirect_to event_path
+    else
+      redirect_to month_calendar_index_path
+    end
+
   end
 
   def destroy
+    @user = User.find_by_id(params[:id])
     event_id = params[:id]
-    event = Event.find_by_id(event_id)
-    event.destroy
-    redirect_to events_path
+    @event = Event.find_by_id(event_id)
+    if current_user == @event.user
+      @event.destroy
+      redirect_to events_path
+    else
+      redirect_to month_calendar_index_path
+    end
   end
+
+  def upvote
+    @event= Event.find(params[:id])
+    @event.upvote_by current_user
+    redirect_back fallback_location: event_path
+  end
+
+  def downvote
+    @event = Event.find(params[:id])
+    @event.downvote_by current_user
+    redirect_back fallback_location: event_path
+  end
+
   private
   def events_params
     params.require(:event).permit(:event, :host, :activities, :address, :zipcode, :search, :start_time)

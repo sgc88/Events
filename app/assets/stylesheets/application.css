@@ -16,16 +16,15 @@
 
 
  */
-body{
-<<<<<<< HEAD
-  background-image: url(/party6.jpg);
-  background-repeat: none;
-  background-size: cover;
-=======
-
->>>>>>> 20c022cf3aef3d78ea4459a050959cd4ac79d952
-  color:brown;
+ @media only screen and (max-width: 1800px) {
+   body{
+     background-image: url(/events.gif);
+     background-repeat: none;
+     background-size: cover;
+     color:black;
+   }
 }
+
 .newEvent{
   margin-left:3%;
   width:20%;
@@ -43,15 +42,8 @@ body{
   float: left;
   margin-left: 0;
   color: brown;
-<<<<<<< HEAD
   font-size: 30px;
-  font-weight: lighter;
-=======
-  font-weight: lighter;
-  font-family:verdana;
-  font-size: 30px;
->>>>>>> 20c022cf3aef3d78ea4459a050959cd4ac79d952
-
+  font-weight: bold;
 }
 .container{
   margin-left: 0;
@@ -61,23 +53,20 @@ body{
 }
 .menu{
   color:black;
-<<<<<<< HEAD
-=======
   text-align: justify;
 }
 
 a{
-  color: brown;
+  color: black;
 }
 .infobar{
   /*padding-top: 150px;*/
   text-align:center;
-
+  font-size: 15px;
 }
 
 .main{
   width:500px;
   height:100px;
   margin-left:22%;
->>>>>>> 20c022cf3aef3d78ea4459a050959cd4ac79d952
 }

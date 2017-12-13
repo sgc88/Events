@@ -1,20 +1,27 @@
-<h2><%= @event.event %></h2>
-<h2><%= @event.host %></h2>
-<h2><%= @event.activities %></h2>
-<h2><%= @event.address %></h2>
-<h2><%= @event.zipcode %></h2>
-<h2><%= @event.start_time %></h2>
+<p><strong>Event:</strong> <%= @event.event %></p>
+<p><strong>Host:</strong> <%= @event.host %></p>
+<p><strong>Activities:</strong> <%= @event.activities %></p>
+<p><strong>Address:</strong> <%= @event.address %></p>
+<p><strong>Zipcode:</strong> <%= @event.zipcode %></p>
+<p><strong>Date:</strong> <i><%= @event.start_time %></i></p>
 
 
 <hr>
-<%= link_to "Edit", edit_event_path(@event), :class => "btn btn-default" %>
-<%= link_to "Delete", event_path(@event),
-          method: :delete,
-          data: {confirm: "Are you sure?"},
-          :class => "btn btn-danger" %>
-<<<<<<< HEAD
-=======
 
-<%= link_to "Going!", :class => "btn btn-succes" %>
-<%= link_to "Maybe", :class => "btn btn-warning" %>
->>>>>>> 20c022cf3aef3d78ea4459a050959cd4ac79d952
+<% if current_user == @event.user %>
+  <%= link_to "Edit", edit_event_path(@event), :class => "btn btn-default" %>
+  <%= link_to "Delete", event_path(@event),
+            method: :delete,
+            data: {confirm: "Are you sure?"},
+            :class => "btn btn-danger" %>
+<% end %>
+
+<%= link_to like_event_path(@event.id), method: :put, class:"btn btn-default" do %>
+  Going
+<%= @event.get_upvotes.size %>
+<% end %>
+
+<%= link_to dislike_event_path(@event.id), method: :put, class:"btn btn-default" do %>
+  Maybe
+<%= @event.get_downvotes.size %>
+<% end %>

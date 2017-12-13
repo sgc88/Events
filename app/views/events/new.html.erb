@@ -1,15 +1,11 @@
 <div class="newEvent">New Event:
 <%= form_for Event.new do |f| %>
 <div class="table"><%= f.text_field :event,  placeholder: "Event" %></div>
-<div class="table"><%= f.text_field :host,  placeholder: "Host" %></div>
+<div class="table"><%= f.hidden_field :host, :value => current_user.name %></div>
 <div class="table"><%= f.text_area :activities,  placeholder: "Activities" %></div>
 <div class="table"><%= f.text_area :address, placeholder: "Address" %></div>
 <div class="table"><%= f.text_area :zipcode, placeholder: "zipcode" %></div>
 <div class="table"><%= f.datetime_select :start_time, id: :calendar_start_time %></div>
 <div class="table"><%= f.submit "Save" %></div>
-<<<<<<< HEAD
-=======
-
->>>>>>> 20c022cf3aef3d78ea4459a050959cd4ac79d952
 <% end %>
 </div>

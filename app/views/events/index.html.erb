@@ -1,20 +1,6 @@
-<<<<<<< HEAD
-<h1>Events</h1>
-<% if @events %>
-<% @events.each do |c| %>
-  <h2><%= c.event %></h2>
-  <p><%= c.host %></p>
-  <p><%= c.activities %></p>
-  <p><%= c.address %></p>
-  <p><%= c.zipcode %></p>
-  <p><%= c.start_time %></p>
-  <%= link_to "Save Event", event_path(c), :class =>"btn btn-default" %>
-<% end %>
-<% end %>
-=======
+
 <%= notice %>
 
->>>>>>> 20c022cf3aef3d78ea4459a050959cd4ac79d952
 
 
 <%= form_tag(events_path, method: :get) do %>
