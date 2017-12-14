@@ -23,9 +23,14 @@
           <ul class="navbar-nav mr-auto">
             <h3><%= link_to "Gallery", static_images_gallery_path%></h3>
           </ul>
+          <ul class="navbar-nav mr-auto search">
+            <%= form_tag(events_path, method: :get) do %>
+              <strong>Events<%= text_field_tag :search, params[:search], placeholder: "zipcode" %></strong>
+              <%= submit_tag 'Search', name: nil%>
+            <% end %>
+          </ul>
           </div>
     </div>
-
       <div class="user">
         <% if current_user %>
          Signed in as <%= current_user.name %> | <%= link_to "logout", '/logout' %>
@@ -34,14 +39,8 @@
         <% end %>
       </div>
     </div>
-
-
   </div>
-
 </nav>
-
-
     <%= yield %>
-
   </body>
 </html>

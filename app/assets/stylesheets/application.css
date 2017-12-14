@@ -67,10 +67,11 @@ a{
   /*padding-top: 150px;*/
   text-align:center;
   font-size: 15px;
+  margin-top: 400px;
 }
 
 .main{
-  width:800px;
+  width:700px;
   height:100px;
   margin-left:22%;
    color: #d54d7b; font-family: "Great Vibes", cursive; font-size: 200px; line-height: 200px; font-weight: normal; margin-bottom: 0px; margin-top: 50px; text-align: center; text-shadow: 0 1px 1px #fff;
@@ -86,4 +87,12 @@ a{
 }
 h5{
   font-size: 17px;
+}
+#company{
+  text-align: center;
+  height:20px;
+}
+.search{
+  margin-top: 4%;
+  font-size: 12px;
 }

@@ -1,9 +1,13 @@
-
+<h1>Events</h1>
 <%= notice %>
-
-
-
-<%= form_tag(events_path, method: :get) do %>
-  <%= text_field_tag :search, params[:search], placeholder: "zipcode"  %>
-  <%= submit_tag 'Search', name: nil%>
+  <% if @events %>
+  <% @events.each do |c| %>
+      <h2><%= c.event %></h2>
+      <p><%= c.host %></p>
+      <p><%= c.activities %></p>
+      <p><%= c.address %></p>
+      <p><%= c.zipcode %></p>
+      <p><%= c.start_time %></p>
+    <%= link_to "Save Event", event_path(c), :class =>"btn btn-default" %>
+  <% end %>
 <% end %>

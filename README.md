@@ -39,6 +39,8 @@ Technologies
   * Bootstrap
   * gem 'simple-calendar'
   * gem 'acts_as_votable
+  * bycrpt
+  * activerecord
 
 
 

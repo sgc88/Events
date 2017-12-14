@@ -1,2 +1,5 @@
-<h1>UserEvent#event</h1>
-<p>Find me in app/views/user_event/event.html.erb</p>
+
+<%= form_tag(events_path, method: :get) do %>
+  Events  <%= text_field_tag :search, params[:search], placeholder: "zipcode"  %>
+  <%= submit_tag 'Search', name: nil%>
+<% end %>
